@@ -1,0 +1,135 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ── */
+.app-header {
+  background: var(--bg-panel);
+  padding: 0 2rem;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.brand-name {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.brand-sub {
+  font-size: 0.5625rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* ── Nav ── */
+.nav-tabs {
+  display: flex;
+  height: 100%;
+}
+
+.nav-tab {
+  display: flex;
+  align-items: center;
+  padding: 0 1.25rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: color 0.2s, border-color 0.2s;
+  height: 100%;
+}
+
+.nav-tab:hover {
+  color: var(--text-primary);
+  border-bottom-color: var(--border-strong);
+}
+
+.nav-tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* ── Main — centered, readable column ── */
+.app-main {
+  flex: 1;
+  padding: 2rem 1.5rem;
+  max-width: 920px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ── Footer ── */
+.app-footer {
+  padding: 0.875rem 2rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-footer p {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .app-header {
+    padding: 0 1rem;
+  }
+
+  .brand-sub {
+    display: none;
+  }
+
+  .app-main {
+    padding: 1rem;
+  }
+
+  .nav-tab {
+    padding: 0 0.875rem;
+    font-size: 0.75rem;
+  }
+
+  .app-footer {
+    flex-direction: column;
+    gap: 0.25rem;
+    text-align: center;
+  }
+}
