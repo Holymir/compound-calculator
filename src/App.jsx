@@ -5,7 +5,7 @@ import './App.css'
 
 function App() {
   return (
-    <Router>
+    <Router basename="/compound-calculator">
       <div className="app">
         <header className="app-header">
           <div className="brand">
