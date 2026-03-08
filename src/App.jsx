@@ -1,11 +1,11 @@
-import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route, NavLink } from 'react-router-dom'
 import CompoundCalculator from './components/CompoundCalculator'
 import EndGoalCalculator from './components/EndGoalCalculator'
 import './App.css'
 
 function App() {
   return (
-    <Router basename="/compound-calculator">
+    <Router>
       <div className="app">
         <header className="app-header">
           <div className="brand">
